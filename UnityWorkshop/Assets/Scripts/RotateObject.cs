@@ -15,26 +15,42 @@ public class RotateObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            isRotating = !isRotating;
-            Debug.Log("Rotation Toggled "+isRotating);
+            ToggleRotation();
         }
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {
-            rotationSpeed += 10;
-            Debug.Log("Rotation Increase : " + rotationSpeed);
+            IncreaseRotationSpeed();
         }
+      
         if (Input.GetKeyDown(KeyCode.KeypadMinus))
         {
-            rotationSpeed -= 10;
-            Debug.Log("Rotation Decrease : " + rotationSpeed);
+            DecreaseRotationSpeed();
         }
 
         if (isRotating)
         {
             gameObject.transform.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
         }
+    }
+    
+    public void ToggleRotation()
+    {
+        isRotating = !isRotating;
+        Debug.Log("Rotation Toggled " + isRotating);
+    }
+
+    public void IncreaseRotationSpeed()
+    {
+        rotationSpeed += 10;
+        Debug.Log("Rotation Increase : " + rotationSpeed);
+    }
+
+    public void DecreaseRotationSpeed()
+    {
+        rotationSpeed -= 10;
+        Debug.Log("Rotation Decrease : " + rotationSpeed);
     }
 }
