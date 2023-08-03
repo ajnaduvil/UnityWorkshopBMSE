@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: f7d367d417c3be546bf26b99e188751c
+  - enabled: 1
     path: Assets/Scenes/PlayerMovement.unity
     guid: 3760b299d125d28479bac8c0eee5a2c2
+  - enabled: 1
+    path: Assets/Scenes/RotateCube.unity
+    guid: e3efd9c09951091419ceb29211e52655
   m_configObjects: {}
